@@ -10,32 +10,53 @@
 
 \setlength{\columnsep}{1cm}
 
+\title{
+    {\Huge Aplicación de ingeniería para la creación de una Videoconsola}\\
+    {\LARGE Demostración práctica de conocimientos de ingeniería en
+    Computación, Electrónica y Eléctrica}
+}
+\author{
+    Aaron Uriel Guzman Cardoso\\
+    \texttt{2100554h@umich.mx}
+    \and
+    Artemisa Cortes Jacobo\\
+    \texttt{1825812h@umich.mx}
+    \and
+    Brandon Alejandro Piñón Estanislado\\
+    \texttt{2100730h@umich.mx}
+    \and
+    Carlos Edwin Bautista Zintzun\\
+    \texttt{2105732g@umich.mx}
+    \and
+    Uriel Felipe Vazquez Orozco\\
+    \texttt{1825946g@umich.mx}
+    \and
+    Maria Fernanda Mendez Sanchez\\
+    \texttt{2100632c@umich.mx}
+    \and
+    Fernanda Montserrado Fabian Reyes\\
+    \texttt{2100721a@umich.mx}
+    \and
+    Jorge Correa Gutierrez\\
+    \texttt{2100536a@umich.mx}
+}
+\date{\today}
 
 \begin{document}
 
-\title{
-    {\Huge Creación de una consola de videojuegos}\\
-    {\LARGE Una demostración práctica de conocimientos de ingeniería}
-}
-\author{
-    {\large Borrador por Aaron Uriel Guzman Cardoso}\\
-    {\large Facultad de Ingeniería Eléctica}\\
-    {\large Universidad Michoacana San Nicolás de Hidalgo}\\
-}
-\date{Tianguis de la Ciencia, aprox. 21 de abril de 2024}
 \maketitle
 
-\newpage
 \begin{multicols}{2}
 
 \begin{abstract}
-    En este artículo se documenta el proceso de ingeniería necesario para
-    diseñar una consola de videojuegos simple a partir de un entorno de hardware
-    bajos recursos, tomando en cuenta las necesidades de una consola: incluir
-    uno o más juegos y cumplir con ser entretenida.\\
+    Se introduce al lector detalles de la propuesta de una creación de
+    consola, se aborda por qué pensamos que es útil para enseñar a estudiantes
+    más jóvenes y comentamos el proceso de ingeniería necesario para su
+    correcto desarrollo.\\
     Se toma en consideración la necesidad de dejar algo de provecho a quien
-    interactúe con el producto final y que el proceso de desarrollo quede claro
-    para quien lea este artículo.
+    interactúe con el producto, el usuario final podrá ser capaz de aplicar
+    modificaciones simples en el producto final y tener conocimiento
+    superficial del desarrollo del producto final.
 \end{abstract}
 
 \textbf{\textit{Palabras clave—}} Desarrollo de software, Ingeniería Electrónica,
@@ -44,10 +65,10 @@ Ingeniería en Computación, Consola DIY.
 \section{Introducción}
 Entre las personas generalmente existe la duda de lo que realmente es una
 ingeniería, pues se suele confundir el trabajo de un técnico con el de un
-ingeniero, ignorando la resolución de problemas, que resulta ser parte
-importante de la ingeniería. Se plantea dar a conocer el proceso que se realiza
-para resolver problemas por medio de ingeniería con la creación de una consola
-de videojuegos.\\
+ingeniero, ignorando aspectos de resolución de problemas y creación de nuevos
+productos, que resulta ser parte importante de la ingeniería. Se plantea dar
+a conocer el proceso que se realiza para resolver problemas por medio de
+ingeniería con la creación de una consola de videojuegos.\\
 El desarrollo de una consola de videojuegos es un proceso extenso que
 requiere de la aplicación de múltiples disciplinas de ingeniería por lo que
 es una excelente demostración de la aplicación de ingeniería. Para tener un
@@ -55,80 +76,60 @@ resultado final satisfactorio es necesario tener definidos requisitos y
 expectativas, alcance, presupuesto y metodología de trabajo. Estos
 aspectos toman en cuenta el tiempo disponible, la experiencia y disciplina del
 equipo.\\
-Este proyecto será expuesto durante el tianguis de la ciencia de 2024 en la
-Universidad Michoacana San Nicolás de Hidalgo.
+Este proyecto será expuesto en el tianguis de la ciencia los días viernes
+19 de abril de 8:00 a 16:00 y sábado 20 de abril de 10:00 a 17:00 en
+colaboración con los proyectos de ``'' y ``'' por lo que será necesario tener
+tablones contiguos para una correcta complementación de los proyectos.
 
 \subsection{Objetivo}
 Dar una mejor noción a estudiantes sobre el proceso de ingeniería para la
 resolución de problemas a través del desarrollo de una consola con juegos
-que sean sencillos/simples pero cumplan con ser divertidos.
+simples que cumplan con ser divertidos.\\
+Se desarrollará un proyecto capaz de tener modificaciones simples en los
+aspectos de software por parte del usuario final.\\
+Este proyecto representará principalmente los aspectos de aplicación de
+ingeniería en Computación e ingeniería Electrónica por lo que será documentado
+el proceso de diseño de software y hardware de manera fácil de entender para
+personas agenas a esta disciplina, pensando en estudiantes jóvenes que todavía
+no empiezan su carrera universitaria.
 
 \section{Especificación}
-\subsection{Alcance y tiempo disponible}
-Al momento de escribir quedan aproximadamente cuatro meses para su presentación,
-por lo es necesario tener especificaciones para un proyecto que se pueda
-realizar en tres meses o menos, por lo que deberá de ser sencillo, simple y
-seguir cumpliendo con la meta final.
+La consola presentará medios para la generación de audio y video junto con
+una implementación de entrada para hasta dos jugadores, todo usando
+tecnologías analógicas y digitales. Se realizará retroalimentación al usuario
+usando estos medios.\\
+Se tendrá disponibles tres videojuegos principales, podrán ser escogidos de
+manera aleatoria dentro de un menú principal y estarán adaptados para
+ejecutarse con un tiempo de juego de tres minutos o menos. Los juegos
+programados para la consola serán los siguientes:
+\begin{enumerate}
+    \item \textbf{Menú principal}. Menú con acceso a todos los juegos,
+        opcionalmente se podrá activar la dinámica de escogerlos
+        aleatoriamente.
+    \item \textbf{Pong}. Un juego simple de dos jugadores en el que se simula
+        una partida de tenis de mesa.
+    \item \textbf{Space Invaders}. Juego arcade donde se eliminan oleadas de
+        enemigos que se acercan cade vez más al jugador.
+    \item \textbf{Complemento de bicicleta.} Se mostrará un mapa bastante
+        simplificado de la universidad en donde tendrás que desplazarte de un
+        punto A a un punto B, a través de pedalear en una bicicleta real. Solo
+        se podrán realizar giros en intersecciones.
+\end{enumerate}
+Los aspectos modificables de los juegos por parte del usuario podrán ser: 
+que tan rápido se mueven, cantidad y comportamiento de ciertos elementos en
+pantalla, y dificultad.
 
-\subsubsection{Hardware}
-Se propone usar una PC de bajos recursos como base para la consola que disponga
-de capacidades nativas de video, audio y gráficos acelerados por GPU, en este
-caso una Raspberry Pi Zero 2 W. Con este equipo disponemos de un procesador de
-1GHz de cuatro núcleos, 512 MB de RAM, conectividad Wifi y Bluetooth, puerto
-micro-USB, salida de video HDMI así como 26 GPIOs con soporte a SPI, I2C y
-UART.\\
-Hay que tomar en cuanta algunas limitaciones que se tienen con la Raspberry Pi
-Zero 2 W y algunas diferencias comparandola con microcontroladores que se pueden
-solventar con componentes externos:
-\begin{itemize}
-    \item El alamcenamiento principal es una microSD y su máxima capacidad es de
-        32 GB.
-    \item El procesador es de 64-bits pero se ve limitado por la RAM, por lo que
-        estamos limitados a ejecutar sistemas operativos de 32-bits.
-    \item No incluye nativamente DACs ni ADCs.
-    \item Solo tiene un puerto micro-USB.
-\end{itemize}
-La entrada del usuario podrá ser digital o analógica, y será através de
-controles que imiten a los de una arcade o una NES, esta entrada será
-digitalizada adecuadamente por un componente externo y recibida por la CPU
-principal para ser interpretada.
-
-\subsubsection{Sistema operativo}
-Se espera tener un sistema operativo modificado para el uso que se le dará a
-la consola, estas modificaciones implican:
-\begin{itemize}
-    \item Un menú en donde inicie la consola, que permita escoger entre uno o
-        más juegos y ajustes generales del sistema.
-    \item Puerto serial y conexión SSH disponibles para realizar ajustes al
-        sistema operativo remotamente.
-\end{itemize}
-
-
-\subsubsection{Juego}
-Seguido a esto, se propone la creación de un único juego que aproveche las
-capacidades del sistema, sea compatible con los controles diseñados y permita
-dos jugadores simultaneos, el juego será un clon de "pong!".\\
-El juego incluirá la posibilidad de guardar mejores puntajes, efectos de sonido
-y gráficos simples en 2D.\\
-Se propone programar en Java utilizando la biblioteca libGDX en busca de un
-desarrollo rápido.
-
-\section{Desarrollo}
-Aquí se incluirá todo lo relacionado al desarrollo del hardware y software
-necesario.
-
-\section{Resultados}
-Se mencionará qué obtuvimos como producto final que se presentará en el tianguis
-de la ciencia.
-
-\section{Conclusiones}
-Se incluirá lo aprendido tras el desarrollo. Como se trabajó con el equipo, que
-metodología fue la más adecuada para trabajar, que dificultades hubo en el
-desarrollo, etc.
-
-\section{Bibliografía}
-Otros artículos o libros que funcionaron como referencia para el desarrollo del
-proyecto o que sea necesario referenciar en el texto del artículo.
+\section{Ingeniería}
+Es necesario la creación de documentación relacionada al desarrollo incluyendo
+investigaciones necesarias para la correcta realización de una actividad y las
+herramientas utilizadas para dicha actividad.\\
+Este proyecto hará uso de microcontroladores así como todos sus puertos y
+sensores disponibles para la generación de video y audio. El comportamiento de
+dicho microcontrolador será dictado por software diseñado específicamente para
+él por medio de lenguajes de programación.\\
+Todo estará en un diseño hecho específicamente para el proyecto con un diseño
+que asemeje una Arcade pequeña. Dentro estará el diseño del circuito soldado
+final junto con una pantalla y altavoces.
 
 \end{multicols}
 
